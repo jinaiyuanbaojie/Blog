@@ -9,5 +9,6 @@
 
 ## 解决方法：    
 构建脚本需要额外添加指令，打开一下工程：
-> open $projectPath/$projectname.xcworkspace
+> open $projectPath/$projectname.xcworkspace    
+
 打开工程后，会自动生成一些额外cocoapods相关的文件，问题解决。
