@@ -1,6 +1,6 @@
-# RunLoop初探
+# RunLoop初探
 
-### RunLoop是什么
+### RunLoop是什么
 **一种do while模型**；      
 **赋予与其关联线程源源不断处理事务的能力**;     
 用伪代码表示如下：    
@@ -68,7 +68,7 @@ int main(int argc, const char * argv[]) {
 **伪代码存在的问题**：过度消耗CUP资源。RunLoop不存在此问题，可以阻塞当前线程（**休眠**），可以唤醒当前线程。
   
 
-### RunLoop内部数据结构
+### RunLoop内部数据结构
 ![image](https://ws3.sinaimg.cn/large/006tNc79ly1fjs3i5ckmfj306u059gm0.jpg)
 
 **Mode**可以理解为RunLoop中不同的通道，RunLoop每次循环只处理一个通道中的任务。    
@@ -118,16 +118,16 @@ Program ended with exit code: 0
 
 **Timer**就是我们开发中用到的定时器。    
 
-> 在 CoreFoundation 里面关于 RunLoop 有5个类:
-> CFRunLoopRef
-> CFRunLoopModeRef
-> CFRunLoopSourceRef
-> CFRunLoopTimerRef
-> CFRunLoopObserverRef
+> 在 CoreFoundation 里面关于 RunLoop 有5个类:
+> CFRunLoopRef
+> CFRunLoopModeRef
+> CFRunLoopSourceRef
+> CFRunLoopTimerRef
+> CFRunLoopObserverRef
 
-### RunLoop的API以及源码
+### RunLoop的API以及源码
 > CFRunLoop位于CoreFoundation层，是开源的。
-- 创建RunLoop
+- 创建RunLoop
 
 ```
 /// 全局的Dictionary，key 是 pthread_t， value 是 CFRunLoopRef
@@ -179,9 +179,9 @@ CFRunLoopRef CFRunLoopGetCurrent() {
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
-- 启动RunLoop
+- 启动RunLoop
 ![image](https://ws4.sinaimg.cn/large/006tNc79ly1fjs6vnna4cj30bl08tdi1.jpg)
-- 唤醒RunLoop
+- 唤醒RunLoop
 
 ```
 GCD's main queue is a serial queue. So, it can only run a single task at a time. Even if that task runs an inner run loop — for example, runs a modal dialog — then other tasks submitted to the main queue can't run until that has completed.
@@ -220,7 +220,7 @@ outer task milestone 2
 inner task
 ```
 
-- 停止RunLoop
+- 停止RunLoop
 
 ```
 #import <Foundation/Foundation.h>
@@ -255,21 +255,21 @@ Program ended with exit code: 0
 ```
 
 
-- 发送消息给RunLoop
+- 发送消息给RunLoop
   - timer
   - observer
   - source
   - block
 
-### RunLoop Thread dispatch_queue 之间的关系
+### RunLoop Thread dispatch_queue 之间的关系
 > dispatch_queue通过RunLoop向线程发送消息。消息已block的形式包装。
-### RunLoop 使用场景
+### RunLoop 使用场景
 - CGD
 - NSAtuoReleasePool
 - UI绘制
 - 点击事件
 
-### 参考资料
+### 参考资料
 1. [stackoverflow](https://stackoverflow.com/questions/12871737/cfrunloopperformblock-vs-dispatch-async/23819286#23819286) https://stackoverflow.com/questions/12871737/cfrunloopperformblock-vs-dispatch-async/23819286#23819286      
 1. [简书](http://www.jianshu.com/p/98f3f9f1d171)    
 
