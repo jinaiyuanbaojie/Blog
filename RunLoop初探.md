@@ -1,8 +1,7 @@
 # RunLoop初探
 
 ### RunLoop是什么
-**一种do while模型**；      
-**赋予与其关联线程源源不断处理事务的能力**;     
+**一种do while模型**,**赋予与其关联线程源源不断处理事务的能力**;    
 用伪代码表示如下：    
 
 ```
@@ -263,10 +262,10 @@ Program ended with exit code: 0
 
 ### RunLoop Thread dispatch_queue 之间的关系
 > dispatch_queue通过RunLoop向线程发送消息。消息已block的形式包装。
-### RunLoop 使用场景
-- CGD
-- NSAtuoReleasePool
-- UI绘制
+### RunLoop 使用场景    
+- CGD   
+- NSAtuoReleasePool   
+- UI绘制    
 - 点击事件
 
 ### 参考资料
