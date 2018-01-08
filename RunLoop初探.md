@@ -263,17 +263,13 @@ Program ended with exit code: 0
 ### RunLoop Thread dispatch_queue 之间的关系
 > dispatch_queue通过RunLoop向线程发送消息。消息已block的形式包装。
 ### RunLoop 使用场景    
-- CGD   
-- NSAtuoReleasePool   
-- UI绘制    
-- 点击事件
+- CGD   
+- NSAtuoReleasePool   
+- UI绘制    
+- 点击事件
 
-### 参考资料
-1. [stackoverflow](https://stackoverflow.com/questions/12871737/cfrunloopperformblock-vs-dispatch-async/23819286#23819286) https://stackoverflow.com/questions/12871737/cfrunloopperformblock-vs-dispatch-async/23819286#23819286      
-1. [简书](http://www.jianshu.com/p/98f3f9f1d171)    
-
-2. 苹果官方文档 
-3. Android:**Looper**
-
-
-[TOC]
+### 参考资料    
+1. [stackoverflow](https://stackoverflow.com/questions/12871737/cfrunloopperformblock-vs-dispatch-async/23819286#23819286) https://stackoverflow.com/questions/12871737/cfrunloopperformblock-vs-dispatch-async/23819286#23819286   
+2. [简书](http://www.jianshu.com/p/98f3f9f1d171)    
+3. 苹果官方文档   
+4. Android:**Looper**
