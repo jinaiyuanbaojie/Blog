@@ -53,7 +53,7 @@ if let userName = (((jsonObject as? NSArray)?[0] as? NSDictionary)?["user"] as? 
   //这个代码基本看不懂了啊！
 }
 ```
-以上[引用](http://tangplin.github.io/swiftyjson/)，显然原生的解析是让人抓狂的。
+以上[引用](http://tangplin.github.io/swiftyjson/)，显然原生的解析是让人抓狂的。		
 2. SwiftyJson解析
 ```
 let json = JSON(data: dataFromNetworking)
@@ -61,7 +61,7 @@ if let userName = json[0]["user"]["name"].string{
   //就这么简单取到了。
 }
 ```
-相比原生的解析简单许多，但是仍然不如`YYModel`优雅。在同事的推荐下，发现了新大陆阿里巴巴的[`HandyJSON`](https://github.com/alibaba/HandyJSON/blob/master/README_cn.md)
+相比原生的解析简单许多，但是仍然不如`YYModel`优雅。在同事的推荐下，发现了新大陆阿里巴巴的[`HandyJSON`](https://github.com/alibaba/HandyJSON/blob/master/README_cn.md)		
 3. HandyJSON解析        
 解析样例
 ```
@@ -83,7 +83,7 @@ if let object = BasicTypes.deserialize(from: jsonString) {
 很优雅的解决方案，但是官方文档下的这句话让人望而却步: 
 >HandyJSON目前依赖于从Swift Runtime源码中推断的内存规则，任何变动我们将随时跟进。   
 
-这是典型的给自己埋雷。
+这是典型的给自己埋雷。		
 4. Codable  
 [Codable](https://www.jianshu.com/p/bdd9c012df15)苹果官方支持，有保证。
 # HandyJSON原理     
