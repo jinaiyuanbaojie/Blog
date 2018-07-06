@@ -53,7 +53,8 @@ if let userName = (((jsonObject as? NSArray)?[0] as? NSDictionary)?["user"] as? 
   //这个代码基本看不懂了啊！
 }
 ```
-以上[引用](http://tangplin.github.io/swiftyjson/)，显然原生的解析是让人抓狂的。		
+以上[引用](http://tangplin.github.io/swiftyjson/)，显然原生的解析是让人抓狂的.
+
 2. SwiftyJson解析
 ```
 let json = JSON(data: dataFromNetworking)
@@ -61,7 +62,8 @@ if let userName = json[0]["user"]["name"].string{
   //就这么简单取到了。
 }
 ```
-相比原生的解析简单许多，但是仍然不如`YYModel`优雅。在同事的推荐下，发现了新大陆阿里巴巴的[`HandyJSON`](https://github.com/alibaba/HandyJSON/blob/master/README_cn.md)		
+相比原生的解析简单许多，但是仍然不如`YYModel`优雅。在同事的推荐下，发现了新大陆阿里巴巴的[`HandyJSON`](https://github.com/alibaba/HandyJSON/blob/master/README_cn.md)
+
 3. HandyJSON解析        
 解析样例
 ```
