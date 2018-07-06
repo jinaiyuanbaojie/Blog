@@ -85,7 +85,8 @@ if let object = BasicTypes.deserialize(from: jsonString) {
 很优雅的解决方案，但是官方文档下的这句话让人望而却步: 
 >HandyJSON目前依赖于从Swift Runtime源码中推断的内存规则，任何变动我们将随时跟进。   
 
-这是典型的给自己埋雷。		
+这是典型的给自己埋雷.
+
 4. Codable  
 [Codable](https://www.jianshu.com/p/bdd9c012df15)苹果官方支持，有保证。
 # HandyJSON原理     
