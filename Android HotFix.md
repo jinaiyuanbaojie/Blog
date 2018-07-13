@@ -26,7 +26,7 @@
 - 混合编译：Android7.0～
 
 # 插桩CLASS_ISPREVERIFED
-- 优化dex -> odex,提升加载速度
-- 满足条件的类会被打桩`CLASS_ISPREVERIFED`标记
+- 优化dex -> odex,为了提升加载速度
+- 满足条件的类会被打桩`CLASS_ISPREVERIFED`标记，不再引入其他dex文件的代码
 - 被打桩的类引用热修复的类时会报错
 - 打桩是为了优化Java代码的装载速度，当A类被标记，引用的B类不在原理的dex文件而在补丁dex文件中时，会报错
