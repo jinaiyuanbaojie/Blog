@@ -1,0 +1,14 @@
+### TIPS
+- .tt文件 生成代码的模版文件 T4(Text Template Transformation Toolkit)
+- `OSAtomicCompareAndSwap32Barrier(_oldValue _newValue _theValue)->Bool` 如果_oldValue == _theValue，那么设置_newValue并返回true。保证操作的原子性。
+- `extension NSObject: ReactiveCompatible { }`
+- `@inline(never)` 永远不要把函数编译成内联形式
+- `@inline(__always)` 与上面相反
+- **ContiguousArray** 不和OC桥接的话，比使用Array更加有效率
+- **precondition(_ condition @escape)** 
+- `swift(>=4.0)` 内置宏判断swift版本
+- __attribute__((constructor)) main函数前执行某方法
+- `.scpt`AppleScript是用在MacOSX上的脚本语言
+- `insert_dylib`可以给App注入动态库。
+- [在OC中使用 class 属性修饰符] 就是给类添加静态成员，但是不会自动合成getter setter，这么做是为了与Swift桥接。（早他妈该有这个东西了）
+- NSURLCache
