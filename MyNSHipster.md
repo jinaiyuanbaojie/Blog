@@ -12,3 +12,4 @@
 - `insert_dylib`可以给App注入动态库。
 - [在OC中使用 class 属性修饰符] 就是给类添加静态成员，但是不会自动合成getter setter，这么做是为了与Swift桥接。（早他妈该有这个东西了）
 - NSURLCache
+- @discardableResult 忽略不使用方法返回值的警告
