@@ -92,6 +92,13 @@ http://andelf.github.io/blog/2014/06/19/modules-for-swift/
 # Codable原理  
 [blog](https://techblog.toutiao.com/2017/07/05/session212/)
 
+# Assets.car
+> 编译后的ipa安装包，内部含有此文件。此文件是`image.xcassets`下图片资源的集合。
+
+# main.bundle & sub.bundle
+> 工程的所有资源文件：图片，文件，xib等等都会存放到手机的bundle路径下。  
+根目录就是main.bundle, main.bundle下存在各种sub.bundle.例如AliSDK.bundle
+
 # TIPS
 - .tt文件 生成代码的模版文件 T4(Text Template Transformation Toolkit)
 - `OSAtomicCompareAndSwap32Barrier(_oldValue _newValue _theValue)->Bool` 如果_oldValue == _theValue，那么设置_newValue并返回true。保证操作的原子性。
