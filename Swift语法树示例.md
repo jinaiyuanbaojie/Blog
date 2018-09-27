@@ -1,6 +1,6 @@
 # SourceKitten获取语法树
 > 基于SourceKit的封装
-```shell
+```json
 input: sourcekitten structure --text "struct A { func b() {} }"
 
 output:
