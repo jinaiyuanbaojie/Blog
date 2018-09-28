@@ -14,10 +14,10 @@
 - NSNull 对象，表示“空”
 > [nshipster](https://nshipster.cn/nil/)
 
-# id NSObject id<NSObject>
+# id NSObject `id<NSObject>`
 - id: 任何对象，Objc中NSObject并非所有类的父类，比如NSProxy
 - NSObject: 父类为NSObject的对象
-- id<NSObject>: 任何实现了NSObject协议的类的对象  
+- `id<NSObject>`: 任何实现了NSObject协议的类的对象  
 > ObjC中既有名为NSObject的protocol也有名为NSObject的class 
 
 # id instancetype
